@@ -1,0 +1,56 @@
+body {
+  background-color: #444442;
+  padding-top: 10px;
+  color: white;
+}
+
+h2 {
+  padding: 1%;
+  font-size: 50px;
+  text-align: center;
+}
+
+input {
+  background-color: #332020;
+  color: white;
+  font-weight: 200;
+}
+
+#Submit {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(15, 141, 223);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#Submit:hover {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#search {
+  background-color: white;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: smaller;
+}
+
+input.error,
+textarea.error {
+  border: 1px solid red; /* highlight inputs with errors */
+}

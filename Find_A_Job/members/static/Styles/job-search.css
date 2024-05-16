@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(195, 195, 195);
+}
+
+.center #fh1 {
+  margin-top: 25px;
+  color: #47bb30;
+}
+
+.center #sign_up {
+  width: 49%;
+  height: 45px;
+  border: 1;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+
+.center #login {
+  width: 50%;
+  height: 45px;
+  border: 1;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}

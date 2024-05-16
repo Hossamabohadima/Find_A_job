@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+.navigationBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.itemInNavigationBar {
+  float: left;
+}
+
+.itemInNavigationBar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.itemInNavigationBar a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #04aa6d;
+}
+
+.headingMargin {
+  margin-top: 50px;
+}
+
+.searchBar {
+  float: right;
+  align-items: center;
+  margin-left: 100px;
+}
+.searchIcon {
+  float: right;
+  padding: 9px;
+  padding-top: 24px;
+  padding-left: 20px;
+  margin-top: 4px;
+  margin-right: 10px;
+}
+.searchTxt {
+  float: right;
+  padding: 7px;
+  margin-top: 4px;
+  margin-right: 0px;
+  font-size: 17px;
+  /*border: none;*/
+}
+
+body {
+  margin-left: 10px;
+}
+
+.navigationBar {
+  margin-left: -10px;
+}

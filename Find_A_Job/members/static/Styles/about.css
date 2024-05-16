@@ -1,0 +1,50 @@
+body {
+  background-color: #444442;
+  color: white;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+  }
+  
+  .text {
+    background-color: lightgray;
+    color: black;
+    font-size: 24px;
+    width: 30%;
+    padding: 20px;
+    margin-right: 20px;
+
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .q1{
+    background-color: lightgray;
+    color: black;
+    padding: 20px;
+    margin-right: 10px;
+
+
+  }
+  

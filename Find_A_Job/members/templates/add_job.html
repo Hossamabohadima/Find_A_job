@@ -1,0 +1,98 @@
+{% load static %}
+<html>
+
+<head>
+  <title>add-job</title>
+  <link rel="stylesheet" href="{% static 'Styles/navigation-bar-Style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{% static 'Styles/add-job.css' %}" />
+  <link rel="icon" type="image/x-icon" href="{% static 'Images/logo.jpg' %}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <ul class="navigationBar">
+    <li class="itemInNavigationBar">
+      <a id="Home" href="jobslist">Home</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a href="about-us">About us</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a href="contact-us">Contact us</a>
+    </li>
+    <li class="itemInNavigationBar active">
+      <a id="my_job" href="applied-jobs">My jobs</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a id="LogOut" href="login">LogOut</a>
+    </li>
+    <li>
+      <div class="searchBar">
+        <button class="searchIcon" type="submit" onclick="search()">
+          <i class="fa fa-search"></i>
+        </button>
+        <input class="searchTxt" type="text" placeholder="Search for position or skill" />
+      </div>
+    </li>
+  </ul>
+  {% csrf_token %}
+  <h1>Add a new job</h1>
+
+  <p>
+    <label class="l1">Job status:</label>
+    <input type="text" class="ma statusValue" type="text" id="statusValue" />
+  </p>
+
+  <p>
+    <label class="l1">ID :</label>
+    <input class="ma" type="text" id="id" />
+  </p>
+
+  <p>
+    <label class="l1">Years of experience :</label>
+    <input type="number" class="ma" id="years" />
+  </p>
+
+  <p>
+    <label class="l1">Position</label>
+    <textarea id="posi" class="ma"></textarea>
+  </p>
+
+  <p>
+    <label class="l1">Firstly, a bit about us:</label>
+    <textarea id="company" class="m"></textarea>
+  </p>
+
+  <p>
+    <label class="l1">What we need from you:</label>
+    <textarea id="description" class="m"></textarea>
+  </p>
+
+  <p>
+    <label class="l1">Skills</label>
+    <textarea id="required" class="m"></textarea>
+  </p>
+
+  <p>
+    <label class="l1">Location:</label>
+    <textarea id="loc" class="ma"></textarea>
+  </p>
+
+  <p>
+    <label class="l1">Salary:</label>
+    <input class="ma" type="number" step="0.01" id="Salary" />
+  </p>
+
+  <p>
+    <label class="l1">Hours of work:</label>
+    <input class="ma" type="number" step="0.01"id="Hours"/>
+  </p>
+
+  <button type="submit" onclick="addJob()" class="Sbtn">Submit</button>
+  <script src="{% static 'scripts/add-job.js' %}"></script>
+  <script src=" {% static 'scripts/adminORuser.js' %}"></script>
+</body>
+
+</html>

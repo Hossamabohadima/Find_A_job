@@ -1,0 +1,86 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{% static 'Styles/sign-up.css' %}" />
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    .notification {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+    }
+
+    .show {
+        opacity: 1;
+    }
+</style>
+</head>
+
+
+<body>
+
+  <div class="wrapper">
+    {% csrf_token %}
+
+      <h1>Sign Up</h1>
+
+      <div class="input-box">
+        <input id="Username" type="text" placeholder="Username" required />
+        <i class="bx bxs-user"></i>
+      </div>
+      <span id="usernameError" style="display: none" class="error">Please enter a username.</span>
+      <div class="input-box">
+        <input id="email" type="email" placeholder="Email" />
+        <i class="bx bxs-envelope"></i>
+      </div>
+      <span id="emailError" style="display: none" class="error">Please enter a valid email.</span>
+      <div class="input-box">
+        <input id="password" type="password" placeholder="Password" min="7" />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <span id="passwordError" style="display: none" class="error">Password must be over 7 characters</span>
+      <div class="input-box">
+        <input id="confirmpasword" type="password" placeholder="ConfirmPassword" min="7" />
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      <span id="confirmPasswordError" style="display: none; margin-bottom: 20px" class="error">Please confirm
+        password</span>
+
+      <div class="input-box" id="hiddenDiv">
+        <input id="companyname" type="text" placeholder="Company Name" />
+        <i class="bx bxs-briefcase-alt-2"></i>
+      </div>
+      <span id="confirmCompanyError" style="display: none; margin-bottom: 20px" class="error">Please Enter company
+        name</span>
+      <div class="is-admin" style="margin-left: 3px">
+        <label><input type="checkbox" id="showDivCheckbox" />I am a company admin
+          and I will provide jobs</label>
+      </div>
+      <button type="submit" class="btn" onclick="Register()">
+        Register
+      </button>
+      <div class="login-link">
+        <p>Already have an account?<a href="login"> Login</a></p>
+      </div>
+  </div>
+  <script src="{% static 'scripts/sign-up.js' %}"></script>
+</body>
+
+</html>

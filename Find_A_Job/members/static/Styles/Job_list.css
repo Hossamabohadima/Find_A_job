@@ -1,0 +1,65 @@
+body {
+    background-color: #444442;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.my_button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #02a066;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background-color: #096159;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.my_button:hover span {
+    width: 100%
+}
+
+.my_button:hover {
+    border: none;
+}

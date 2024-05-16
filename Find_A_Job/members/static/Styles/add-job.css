@@ -1,0 +1,73 @@
+h1 {
+  font-weight: 600;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+}
+
+
+body {
+  background-color: #444442;
+  padding-top: 50px;
+}
+
+.Sbtn {
+  height: 45px;
+  margin-left: 25%;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  background-color: #4b8cfb;
+  color: white;
+  margin-bottom: 20px;
+
+}
+
+.l1 {
+  color: white;
+  font-size: larger;
+  margin-left: 25%;
+
+}
+
+.m {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  border: 0;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: flex;
+  width: 50%;
+  height: 10%;
+}
+
+.ma {
+  width: 25%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  border: 0;
+  background-color: #2d2d2d;
+  color: white;
+  display: flex;
+
+}
+
+.error {
+  color: red;
+  margin-left: 25%;
+  margin-top: 5px;
+  font-size: smaller;
+}
+
+input.error,
+textarea.error {
+  border: 1px solid red;
+}

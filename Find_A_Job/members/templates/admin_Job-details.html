@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>admin_Job_details</title>
+  <link rel="stylesheet" href="{% static 'Styles/navigation-bar-Style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" type="image/x-icon" href="{% static 'Images/logo.jpg' %}" />
+  <link rel="stylesheet" href="{% static 'Styles/jobdetails-PageStyle.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <ul class="navigationBar">
+    <li class="itemInNavigationBar">
+      <a id="Home" href="jobslist">Home</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a href="about-us">About us</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a href="contact-us">Contact us</a>
+    </li>
+    <li class="itemInNavigationBar active">
+      <a id="my_job" href="applied-jobs">My jobs</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a id="LogOut" href="login">LogOut</a>
+    </li>
+    <li>
+      <div class="searchBar">
+        <button class="searchIcon" type="submit" onclick="search()">
+          <i class="fa fa-search"></i>
+        </button>
+        <input class="searchTxt" type="text" placeholder="Search for position or skill" />
+      </div>
+    </li>
+  </ul>
+  <script src="{% static 'scripts/admin_Job-details.js' %} "></script>
+  <script src=" {% static 'scripts/adminORuser.js' %}"></script>
+</body>
+
+</html>

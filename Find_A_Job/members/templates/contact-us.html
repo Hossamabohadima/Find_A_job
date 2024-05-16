@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{% static 'Styles/navigation-bar-Style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{% static 'Styles/contact.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Contact us</h1>
+    </div>
+    <div class="row">
+      <h4 style="text-align: center">
+        Need to get in touch with us? Either fill out the form with your
+        inquiry or use contact emails below.
+      </h4>
+    </div>
+    <div class="row input-container">
+      <div class="styled-input wide">
+        {% csrf_token %}
+
+        <input id="Name" type="text" class="m" />
+        <label>Name</label>
+      </div>
+      <div class="styled-input">
+        <input id="email" type="text" class="m" />
+        <label>Email</label>
+      </div>
+      <div class="styled-input" style="float: right">
+        <input id="phone" type="text" class="m" />
+        <label>Phone Number</label>
+      </div>
+      <div class="styled-input wide">
+        <textarea class="m" id="Message"></textarea>
+        <label>Message</label>
+      </div>
+      <button id="submitBtn" type="submit" onclick="submit()" class="btn-lrg submit-btn">
+        Send Message
+      </button>
+    </div>
+  </div>
+
+  <ul class="navigationBar">
+    <li class="itemInNavigationBar">
+      <a id="Home" href="jobslist">Home</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a href="about-us">About us</a>
+    </li>
+    <li class="itemInNavigationBar active">
+      <a href="contact-us">Contact us</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a id="my_job" href="applied-jobs">My jobs</a>
+    </li>
+    <li class="itemInNavigationBar">
+      <a id="LogOut" href="login">LogOut</a>
+    </li>
+    <li>
+      <div class="searchBar">
+        <button class="searchIcon" type="submit" onclick="search()">
+          <i class="fa fa-search"></i>
+        </button>
+        <input class="searchTxt" type="text" placeholder="Search for position or skill" />
+      </div>
+    </li>
+  </ul>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <td>Mahmoud Ehab Helmy</td>
+      <td>01017353812</td>
+      <td>elhartym972@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Mohamed Nasser Hassan</td>
+      <td>01121937626</td>
+      <td>amdgamal47@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Mahmoud Reda Sharaf Eldeen</td>
+      <td>01016212186</td>
+      <td>mahmoudsharaf796@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Hussam El-Din Samir Abu Hadima</td>
+      <td>01127710427</td>
+      <td>hossamabohadima@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Mohamed Sayed Ahmed Kasib</td>
+      <td>01028532246</td>
+      <td>mohamed3.kaseb@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Mohamed Essam El Din Hassan</td>
+      <td>01155688070</td>
+      <td>Eng.abuessam@gmail.com</td>
+    </tr>
+  </table>
+  <script src="{% static 'scripts/Contact_us.js' %}"></script>
+  <script src="{% static 'scripts/adminORuser.js' %} "></script>
+</body>
+
+</html>

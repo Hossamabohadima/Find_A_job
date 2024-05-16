@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job details</title>
+  <link rel="stylesheet" href="{% static 'Styles/navigation-bar-Style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" type="image/x-icon" href="{% static 'Images/logo.jpg' %}" />
+  <link rel="stylesheet" href="{% static 'Styles/add-job.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <ul class="navigationBar">
+        <li class="itemInNavigationBar">
+            <a id="Home" href="jobslist">Home</a>
+        </li>
+        <li class="itemInNavigationBar">
+            <a href="about-us">About us</a>
+        </li>
+        <li class="itemInNavigationBar">
+            <a href="contact-us">Contact us</a>
+        </li>
+        <li class="itemInNavigationBar active">
+            <a id="my_job" href="applied-jobs">My jobs</a>
+        </li>
+        <li class="itemInNavigationBar">
+            <a id="LogOut" href="login">LogOut</a>
+        </li>
+        <li>
+            <div class="searchBar">
+              <button class="searchIcon" type="submit" onclick="search()">
+                <i class="fa fa-search"></i>
+              </button>
+              <input class="searchTxt" type="text" placeholder="Search for position or skill" />
+            </div>
+          </li>
+    </ul>
+
+    <p id="headingParagraph" class="headingMargin">
+    <h1 id="mainHeading"></h1>
+    </p>
+    {% csrf_token %}
+
+    <p>
+        <label class="l1">Job status:</label>
+        <input type="text" class="ma statusValue" type="text" id="statusValue" />
+    </p>
+
+    <p>
+        <label class="l1">ID :</label>
+        <input class="ma" type="text" id="id" />
+    </p>
+
+    <p>
+        <label class="l1">Years of experience :</label>
+        <input type="number" class="ma" id="years" />
+    </p>
+
+
+
+    <p>
+        <label class="l1">Position</label>
+        <textarea id="posi" class="ma"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">Firstly, a bit about us:</label>
+        <textarea id="company" class="m"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">What we need from you:</label>
+        <textarea id="description" class="m"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">Skills</label>
+        <textarea id="required" class="m"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">Location:</label>
+        <textarea id="loc" class="ma"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">Salary:</label>
+        <textarea id="Salary" class="ma"></textarea>
+    </p>
+
+    <p>
+        <label class="l1">Hours of work:</label>
+        <textarea id="Hours" class="ma"></textarea>
+    </p>
+
+    <div id="editButtonDiv" class="divlock">
+        <button onclick="addJob()" class="Sbtn">Edit Job</button>
+    </div>
+
+    <script src="{% static 'scripts/AdminEdit-job.js' %}"></script>
+    <script src=" {% static 'scripts/adminORuser.js' %}"></script>
+</body>
+
+</html>

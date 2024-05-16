@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="M & H a business and employment-focused social media platform that works through websites and mobile apps." />
+  <title>M & H</title>
+
+  <link rel="stylesheet" href="{% static 'Styles/job-search.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}">
+</head>
+
+<body>
+  <div class="center">
+    <img id="img1" src="{% static 'images/logo.jpg' %}" alt="logo" width="200" height="200" />
+    <h1 id="fh1">
+      Hello and Welcome to our job search website Please sign in or register
+    </h1>
+    <button id="sign_up" onclick="document.location='sign_up'">
+      Sign up
+    </button>
+
+    <button id="login" onclick="document.location='login'">Login</button>
+  </div>
+</body>
+
+</html>
